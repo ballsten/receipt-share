@@ -1,0 +1,18 @@
+.ui.container {
+    margin-top: 5em;
+}
+
+.balance {
+    font-size: 4em;
+    text-align: center;
+    font-weight: normal;
+}
+
+.balance span {
+    display: block;
+    color: red;
+}
+
+.wide {
+    width: 90% !important;
+}
