@@ -22,3 +22,4 @@ semantic:ui
 flemay:less-autoprefixer
 iron:router
 useraccounts:semantic-ui
+accounts-password
