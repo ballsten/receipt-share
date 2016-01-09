@@ -1,9 +1,14 @@
 <template name="authPanel">
+    {{#if currentUser}}
+    <div class="item">Welcome {{currentUser.username}}</div>
+    <div class="ui logout button">Logout</div>
+    {{else}}
     <div class="ui inverted input">
-        <input class="login" type="text" placeholder="username">
+        <input class="login username" type="text" placeholder="username">
     </div>
     <div class="ui inverted input">
-        <input class="login" type="text" placeholder="password">
+        <input class="login password" type="password" placeholder="password">
     </div>
-    <div class="ui button">Login</div>
+    <div class="ui login button">Login</div>
+    {{/if}}
 </template>
