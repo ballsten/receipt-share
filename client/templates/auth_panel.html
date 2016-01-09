@@ -3,12 +3,15 @@
     <div class="item">Welcome {{currentUser.username}}</div>
     <div class="ui logout button">Logout</div>
     {{else}}
-    <div class="ui inverted input">
-        <input class="login username" type="text" placeholder="username">
-    </div>
-    <div class="ui inverted input">
-        <input class="login password" type="password" placeholder="password">
-    </div>
-    <div class="ui login button">Login</div>
+    <form class="login">
+        <div class="ui inverted input">
+            <input class="login username" type="text" placeholder="username">
+        </div>
+        <div class="ui inverted input">
+            <input class="login password" type="password" placeholder="password">
+        </div>
+        <div class="ui login button">Login</div>
+        <input type="submit" style="display:none">
+    </form>
     {{/if}}
 </template>
