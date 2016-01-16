@@ -5,7 +5,9 @@
     </div>
     <div class="ui container">
         <div class="ui attached segment">
-            <h1 class="ui center aligned balance">Andrew owes <span>$45.00</span></h1>
+            {{#with currentDebt}}
+            <h1 class="ui center aligned balance">{{name}} owes <span>${{debt}}</span></h1>
+            {{/with}}
         </div>
         <div class="ui bottom attached green labeled icon button">
             <i class="in cart icon"></i>Check Out
@@ -18,18 +20,20 @@
                 </tr>
             </thead>
             <tbody>
+                {{# each currentReceipts }}
                 <tr>
                     <td>
                         <h4 class="ui image header">
-                            <a class="ui big blue circular label">C</a>
+                            <a class="ui big {{user.colour}} circular label">{{user.tag}}</a>
                             <div class="content">
-                                Carla
-                                <div class="sub header">Nespresso pods</div>
+                                {{user.name}}
+                                <div class="sub header">{{description}}</div>
                             </div>
                         </h4>
                     </td>
-                    <td>$90.00</td>
+                    <td>${{amount}}</td>
                 </tr>
+                {{/each}}
             </tbody>
         </table>
         
