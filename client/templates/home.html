@@ -9,7 +9,7 @@
             <h1 class="ui center aligned balance">{{name}} owes <span>${{debt}}</span></h1>
             {{/with}}
         </div>
-        <div class="ui bottom attached green labeled icon button">
+        <div id="check-out-button" class="ui bottom attached green labeled icon button">
             <i class="in cart icon"></i>Check Out
         </div>
         
@@ -56,4 +56,30 @@
         </form>
         
     </div>
+    
+    <div class="ui basic modal">
+        <i class="close icon"></i>
+        <div class="header">Check Out</div>
+        <div class="image content">
+            <div class="image">
+                <i class="in cart icon"></i>
+            </div>
+            <div class="description">
+                <p>Are you sure you want to checkout? Have you transferred the money?</p>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="two fluid ui inverted buttons">
+                <div id="modal-no-button" class="ui red basic inverted button">
+                    <i class="remove icon"></i>
+                    No
+                </div>
+                <div id="modal-yes-button" class="ui green basic inverted button">
+                    <i class="checkmark icon"></i>
+                    Yes
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>

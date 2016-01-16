@@ -62,5 +62,15 @@ Template.home.events({
         $('#add-receipt-form').hide(500);
         
         form.form('reset');
+    },
+    'click #check-out-button': function(event, template) {
+        $('.ui.basic.modal').modal('show');
+        $('#modal-no-button').on('click', function(event, template) {
+            $('.ui.basic.modal').modal('hide');
+        });
+        $('#modal-yes-button').on('click', function(event, template) {
+            Meteor.call('checkOut');
+            $('.ui.basic.modal').modal('hide');
+        });
     }
 });
