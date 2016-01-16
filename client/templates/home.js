@@ -36,7 +36,9 @@ Template.home.helpers({
                     a.debt += receipt.amount/people;
             });
         });
-        return _.max(ledger, function(a) { return a.debt });
+        var debtor = _.max(ledger, function(a) { return a.debt });
+        debtor.debt = debtor.debt.toFixed(2);
+        return debtor;
     }
 });
 
